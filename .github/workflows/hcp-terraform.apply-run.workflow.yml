@@ -53,6 +53,12 @@ jobs:
           workspace: ${{ env.TF_WORKSPACE }}
           configuration_version: ${{ steps.upload.outputs.configuration_version_id }}
 
+      - uses: hashicorp/tfc-workflows-github/actions/show-run@v1.3.0
+        id: show-run
+        with:
+          workspace: ${{ env.TF_WORKSPACE }}
+          configuration_version: ${{ steps.upload.outputs.configuration_version_id }}
+
       - uses: hashicorp/tfc-workflows-github/actions/apply-run@v1.3.0
         id: apply
         if: ${{ fromJSON(steps.create-run.outputs.payload).data.attributes.actions.IsConfirmable }}
