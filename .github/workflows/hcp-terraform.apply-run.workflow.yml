@@ -56,8 +56,8 @@ jobs:
       - uses: hashicorp/tfc-workflows-github/actions/show-run@v1.3.0
         id: show-run
         with:
-          workspace: ${{ env.TF_WORKSPACE }}
-          configuration_version: ${{ steps.upload.outputs.configuration_version_id }}
+          run: ${{ steps.create-run.outputs.run_id }}
+  
 
       - uses: hashicorp/tfc-workflows-github/actions/apply-run@v1.3.0
         id: apply
