@@ -63,8 +63,6 @@ jobs:
           plan: ${{ steps.run.outputs.plan_id }}
 
       - id: full-plan-output
-        with:
-          plan: ${{ steps.run.outputs.plan_id }}
         run: echo "hello world"
           # curl --header “Authorization: Bearer $TF_API_TOKEN” --header “Content-Type: application/vnd.api+json” --location https://app.terraform.io/api/v2/plans/${{ steps.run.outputs.plan_id }}/json-output | jq
 
