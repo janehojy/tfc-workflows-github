@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "jane" {
-  bucket = "jane-bucket-12345678"
+  bucket = "jane-bucket-123456789"
 
   tags = {
     Name        = "jane-bucket"
