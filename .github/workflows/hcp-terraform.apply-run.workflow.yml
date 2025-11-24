@@ -38,6 +38,7 @@ jobs:
     ## Example:
     # env:
     #  TF_CLOUD_ORGANIZATION: ${{ secrets.TF_CLOUD_ORG }}
+    environment: staging
     steps:
       - uses: actions/checkout@v3
 
